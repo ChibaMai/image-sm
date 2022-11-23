@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>images</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/init_style_css@1.0.0/init.min.css">
+  <script src="data.js"></script>
+</head>
+<body>
+  <style>
+    body {
+      background-color: rgba(203, 11, 11, 0.639);
+    }
+
+    #image {
+      /* column-count: 5;
+      column-gap: 10px;
+      margin: 10px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .itme {
+      position: relative;
+      width: 11%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .itme i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: orange;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+
+  <div id="image"></div>
+
+  <script>
+    let ul = document.getElementById("image");
+    let count = image;
+
+    function render(ele, number) {
+      let html = "";
+
+      for (let index = 0; index < number.length; index++) {
+      // for (let index = 0; index < number; index++) {
+        html += `
+        <div class="itme">
+          <a href="${number[index]}" alt="" target="_blank">
+            <img src="${number[index]}" alt="第${index}张">
+          </a>
+        </div>`
+      }
+
+      ele.innerHTML = html;
+    }
+
+    render(ul, count)
+    
+    // var windowH = window.innerHeight;
+    // //获取显示区域的高度
+    // var oMain = document.querySelector("#image");
+    // var oMainHeight = oMain.offsetHeight;
+    // //获取显示区域的偏移量
+    // var oMainTop = oMain.offsetTop;
+ 
+    // var flag = false;
+
+    // window.onscroll = function (epic) {
+    //   // // 内容高度
+    //   // let pageHeight = document.documentElement.scrollHeight;
+    //   // // 滚动高度
+    //   // let pageStop = document.documentElement.scrollTop;
+    //   // // 可视化高度
+    //   // let seeHeight = document.documentElement.clientHeight;
+    //   // // 距离页脚高度
+    //   // let result = pageHeight - pageStop - seeHeight;
+    //   // let flag = false;
+      
+    //   var top = document.documentElement.scrollTop;
+
+    //   if (flag) {
+    //     return
+    //   }
+
+    //   if (windowH + top >= oMainHeight + oMainTop) {
+    //     flag = true;
+    //     count += 20
+
+    //     setTimeout(() => {
+    //       render(ul, count)
+    //       flag = false
+    //     }, 1000);
+    //   }
+
+    // }
+
+  </script>
+</body>
+</html>
