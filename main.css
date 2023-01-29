@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(203, 11, 11, 0.639);
+}
+
+#images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 10px;
+}
